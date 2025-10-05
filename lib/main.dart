@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:trackizer/common/color_extension.dart';
 import 'package:trackizer/view/login/welcome_view.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +16,15 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        fontFamily: "Inter",
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: TColor.primary,
+          surface: TColor.gray80,
+          primary: TColor.primary,
+          primaryContainer: TColor.gray60,
+          secondary: TColor.secondary,
+        ),
+        useMaterial3: false,
       ),
       home: const WelcomeView(),
     );
