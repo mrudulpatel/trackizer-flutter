@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:trackizer/view/login/welcome_view.dart';
 void main() {
   runApp(const MyApp());
 }
