@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/common/color_extension.dart';
+import 'package:trackizer/common/color_extension.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String title;
@@ -27,7 +27,7 @@ class PrimaryButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
           boxShadow: [
             BoxShadow(
-              color: TColor.secondary.withValues(alpha: 0.5),
+              color: TColor.secondary.withValues(alpha: 0.25),
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),

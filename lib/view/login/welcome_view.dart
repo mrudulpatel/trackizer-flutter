@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:myapp/common/color_extension.dart';
-import 'package:myapp/common_widget/primary_button.dart';
-import 'package:myapp/common_widget/secondary_button.dart';
-import 'package:myapp/view/login/social_login.dart';
+import 'package:trackizer/common/color_extension.dart';
+import 'package:trackizer/common_widget/primary_button.dart';
+import 'package:trackizer/common_widget/secondary_button.dart';
+import 'package:trackizer/view/login/sign_in_view.dart';
+import 'package:trackizer/view/login/social_login.dart';
 
 class WelcomeView extends StatefulWidget {
   const WelcomeView({super.key});
@@ -68,7 +69,17 @@ class _WelcomeViewState extends State<WelcomeView> {
 
                   const SizedBox(height: 15),
 
-                  SecondaryButton(title: "I have an account", onPressed: () {}),
+                  SecondaryButton(
+                    title: "I have an account",
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignInView(),
+                        ),
+                      );
+                    },
+                  ),
                 ],
               ),
             ),

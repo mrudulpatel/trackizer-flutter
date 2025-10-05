@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/common_widget/secondary_button.dart';
+import 'package:trackizer/common_widget/secondary_button.dart';
+import 'package:trackizer/view/login/sign_up_view.dart';
 import '../../common/color_extension.dart';
 
 class SocialLoginView extends StatefulWidget {
@@ -143,7 +144,15 @@ class _SocialLoginViewState extends State<SocialLoginView> {
                 style: TextStyle(color: TColor.white, fontSize: 14),
               ),
               const SizedBox(height: 25),
-              SecondaryButton(title: "Sign up with E-mail", onPressed: () {}),
+              SecondaryButton(
+                title: "Sign up with E-mail",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SignUpView()),
+                  );
+                },
+              ),
               const SizedBox(height: 20),
               Text(
                 "By registering, you agree to our Terms of Use. Learn how we collect, use and share your data.",

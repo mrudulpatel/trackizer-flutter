@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/common/color_extension.dart';
+import 'package:trackizer/common/color_extension.dart';
 
 class SecondaryButton extends StatelessWidget {
   final String title;
